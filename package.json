@@ -1,0 +1,44 @@
+{
+  "name": "property_pro_lite_api",
+  "version": "1.0.0",
+  "description": "Property Pro Lite is a platform where people can create and/or search properties for sale or rent.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnuwa/property_pro_lite_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnuwa/property_pro_lite_api/issues"
+  },
+  "homepage": "https://github.com/dnuwa/property_pro_lite_api#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  }
+}
