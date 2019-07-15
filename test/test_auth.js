@@ -5,6 +5,7 @@ import app from '../index';
 import base from './base';
 
 const SIGNUP_URL = '/api/v1/auth/signup';
+const LOGIN_URL = '/api/v1/auth/signin';
 
 // Configure chai
 chai.use(chaiHttp);
@@ -108,6 +109,22 @@ describe('POST', () => {
         res.body.should.be.a('object');
         res.body.should.have.property('status');
         res.body.should.have.property('error').eql(error);
+        done();
+      });
+  });
+});
+
+describe('Login Authentication ', () => {
+  it('Should login user', (done) => {
+    chai.request(app)
+      .post(LOGIN_URL)
+      .send(base.login_user_1)
+      .end((error, resp) => {
+        if (error) done();
+        resp.should.have.status(200);
+        resp.body.should.be.a('object');
+        resp.body.should.have.property('status');
+        resp.body.should.have.property('data');
         done();
       });
   });

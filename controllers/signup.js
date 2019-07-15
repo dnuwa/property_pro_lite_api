@@ -31,15 +31,9 @@ exports.signup = async (req, res) => {
 
   return res.status(201).send({
     status: 201,
+    message: 'User Successfully Created',
     data: {
       token: middleware.token(row.id),
-      id: row.id,
-      firstName: row.firstname,
-      lastName: row.lastname,
-      email: row.email,
-      phoneNumber: row.phoneNumber,
-      isAdmin: row.isAdmin,
-      createdAt: row.createdat,
     },
   });
 };
