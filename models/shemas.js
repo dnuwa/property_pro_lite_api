@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS
                 firstName VARCHAR(128) NOT NULL,
                 lastName VARCHAR(128),
                 password TEXT NOT NULL,
-                phoneNumber INTEGER NOT NULL,
+                phoneNumber VARCHAR(15) NOT NULL,
                 address VARCHAR(128) NOT NULL,
                 isAdmin BOOLEAN DEFAULT TRUE,
                 createdAt TIMESTAMP DEFAULT NOW(),
