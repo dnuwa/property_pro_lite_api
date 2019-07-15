@@ -61,3 +61,16 @@ export function validatePhoneNumber(req, res, next) {
   }
   next();
 }
+
+// login middleware
+export function validateSignin(req, res, next) {
+  const { password, email } = req.body;
+  if (!email || !password) {
+    return res.status(400).json({
+      status: 400,
+      message: 'bad request',
+      error: 'Email and Password are required !',
+    });
+  }
+  next();
+}
