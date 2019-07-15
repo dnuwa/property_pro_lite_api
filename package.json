@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development nodemon index --exec babel-node",
     "migrate": "babel-node ./models createTables",
     "drop": "babel-node ./models tearDown",
-    "lint": "node_modules/.bin/eslint --fix src",
+    "lint": "node_modules/.bin/eslint --fix",
     "test": "cross-env NODE_ENV=testing npm run drop && cross-env NODE_ENV=testing npm run migrate && cross-env NODE_ENV=testing nyc --reporter=html --reporter=text --require @babel/register --require @babel/polyfill mocha test/**/*.js --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "heroku-post-build": "npm install"

@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS
                 createdOn TIMESTAMP DEFAULT NOW(),
                 updatedOn TIMESTAMP DEFAULT NOW(),
                 owner INTEGER NOT NULL ,
+                imageUrl VARCHAR(128) NOT NULL,
                 FOREIGN KEY(owner) REFERENCES users(id) ON DELETE CASCADE);
 CREATE TABLE IF NOT EXISTS
           flag(
