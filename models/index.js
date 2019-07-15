@@ -13,7 +13,7 @@ const createTables = () => {
 };
 
 const tearDown = () => {
-  const sql = 'DROP TABLE IF EXISTS users, accounts, transactions CASCADE';
+  const sql = 'DROP TABLE IF EXISTS users, property, flag CASCADE';
 
   pool.query(sql)
     .then(() => {
