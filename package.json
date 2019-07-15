@@ -9,7 +9,8 @@
     "migrate": "babel-node ./models createTables",
     "drop": "babel-node ./models tearDown",
     "lint": "node_modules/.bin/eslint --fix src",
-    "test": "cross-env NODE_ENV=testing npm run drop && cross-env NODE_ENV=testing npm run migrate && cross-env NODE_ENV=testing nyc --reporter=html --reporter=text --require @babel/register --require @babel/polyfill mocha test/**/*.js --exit"
+    "test": "cross-env NODE_ENV=testing npm run drop && cross-env NODE_ENV=testing npm run migrate && cross-env NODE_ENV=testing nyc --reporter=html --reporter=text --require @babel/register --require @babel/polyfill mocha test/**/*.js --exit",
+    "heroku-post-build": "npm install"
   },
   "repository": {
     "type": "git",
