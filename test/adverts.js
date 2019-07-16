@@ -83,4 +83,16 @@ describe('CREATE AN ADVERT ', () => {
         done();
       });
   });
+
+  it('should return 200 on successful return of an advert', (done) => {
+    chai.request(app)
+      .get('/api/v1/property/1')
+      .end((error, resp) => {
+        if (error) done();
+        resp.should.have.status(200);
+        resp.body.should.be.a('object');
+        resp.body.should.have.property('data');
+        done();
+      });
+  });
 });

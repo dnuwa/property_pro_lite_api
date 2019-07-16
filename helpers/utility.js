@@ -7,4 +7,5 @@ async function currentUser(id) {
   return rows[0];
 }
 
+
 export default currentUser;

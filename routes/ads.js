@@ -12,5 +12,7 @@ adRouter
     validatePrice, advertController.createAdvert);
 adRouter.route('/property/type/:type').get(searchController.searchAdvert);
 adRouter.route('/property').get(advertController.allAdverts);
+adRouter
+  .route('/property/:propertyId').get(advertController.singleAdvert);
 
 module.exports = adRouter;
