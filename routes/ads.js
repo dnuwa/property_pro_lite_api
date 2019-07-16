@@ -3,8 +3,9 @@ import advertController from '../controllers/adverts';
 import searchController from '../controllers/searchAdverts';
 import deleteController from '../controllers/deleteAdvert';
 import updateController from '../controllers/updateAdvert';
+import markAsSoldcontroller from '../controllers/soldAdvert';
 import middleware from '../middleware';
-import { validateEmptyFields, validatePrice } from '../middleware/property';
+import { validateEmptyFields, validatePrice, validateStatus } from '../middleware/property';
 
 const adRouter = Router();
 
@@ -18,5 +19,7 @@ adRouter
   .route('/property/:propertyId').get(advertController.singleAdvert)
   .delete(middleware.verifyToken, deleteController.deleteAdvert)
   .patch(middleware.verifyToken, validatePrice, updateController.updateAdvert);
-
+adRouter
+  .route('/property/:propertyId/sold')
+  .patch(middleware.verifyToken, validateStatus, markAsSoldcontroller.markSold);
 module.exports = adRouter;
