@@ -93,6 +93,21 @@ exports.signup_user_9 = {
   isAdmin: true,
 };
 
+exports.signup_user_10 = {
+  email: 'daniel@gmail.com',
+  password: 'somestring1',
+  lastName: 'nuwa',
+  firstName: 'daniel',
+  phoneNumber: '+256701354725',
+  address: 'plot 12 bukoto street',
+  isAdmin: true,
+};
+
+exports.login_user_10 = {
+  email: 'daniel@gmail.com',
+  password: 'somestring1',
+};
+
 exports.login_user_8 = {
   email: 'nuwagaba@gmail.com',
   password: 'somestring1',
@@ -123,6 +138,17 @@ exports.advert_2 = {
 exports.advert_3 = {
   status: 'available',
   description: 'houses in kigali city center',
+  type: 'residential',
+  state: 'available',
+  city: 'kampala',
+  address: 'bukoto street',
+  price: '10000',
+  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+};
+
+exports.advert_4 = {
+  status: 'available',
+  description: 'kigali city center houses',
   type: 'residential',
   state: 'available',
   city: 'kampala',
