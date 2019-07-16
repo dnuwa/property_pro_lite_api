@@ -11,5 +11,6 @@ adRouter
   .post(middleware.verifyToken, validateEmptyFields,
     validatePrice, advertController.createAdvert);
 adRouter.route('/property/type/:type').get(searchController.searchAdvert);
+adRouter.route('/property').get(advertController.allAdverts);
 
 module.exports = adRouter;

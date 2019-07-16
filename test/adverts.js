@@ -72,4 +72,15 @@ describe('CREATE AN ADVERT ', () => {
           });
       });
   });
+  it('should return 200 on successful retrieval', (done) => {
+    chai.request(app)
+      .get('/api/v1/property')
+      .end((error, resp) => {
+        if (error) done();
+        resp.should.have.status(200);
+        resp.body.should.be.a('object');
+        resp.body.should.have.property('data');
+        done();
+      });
+  });
 });
