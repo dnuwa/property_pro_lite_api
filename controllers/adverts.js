@@ -1,4 +1,5 @@
 import currentUser from '../helpers/utility';
+
 import db from '../db';
 
 exports.createAdvert = async (req, res) => {
@@ -76,5 +77,28 @@ exports.allAdverts = async (req, res) => {
     status: 200,
     message: 'Adverts Successfully Retrieved!',
     data: advertList,
+  });
+};
+
+// returns a single property advert
+exports.singleAdvert = async (req, res) => {
+  const { params: { propertyId } } = req;
+
+  const query = 'SELECT * FROM property WHERE id = $1';
+  const propertyAd = await db.query(query, [Number(propertyId)]);
+  if (propertyAd.rows.length === 0) {
+    return res.status(400).json({
+      status: 400,
+      message: 'Advert Not Found !',
+      error: `There is no property advert with Id: ${propertyId}`,
+
+    });
+  }
+
+  return res.status(200).json({
+    status: 200,
+    message: 'Advert Found !',
+    data: propertyAd.rows,
+
   });
 };
