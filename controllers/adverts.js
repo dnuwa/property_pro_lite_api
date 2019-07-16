@@ -51,3 +51,30 @@ exports.createAdvert = async (req, res) => {
     },
   });
 };
+
+exports.allAdverts = async (req, res) => {
+  const query = 'SELECT * FROM property';
+  const { rows } = await db.query(query);
+  const advertList = [];
+  rows.forEach((row) => {
+    const data = {
+      id: row.id,
+      Status: row.status,
+      Description: row.description,
+      Type: row.type,
+      State: row.state,
+      City: row.city,
+      Address: row.address,
+      Price: row.price,
+      Image: row.imageUrl,
+      created_on: row.createdon,
+      created_by_staffId: row.owner,
+    };
+    advertList.push(data);
+  });
+  return res.status(200).json({
+    status: 200,
+    message: 'Adverts Successfully Retrieved!',
+    data: advertList,
+  });
+};
