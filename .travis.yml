@@ -20,7 +20,6 @@ before_script:
 
 env:
   global:
-    - CODECLIMATE_REPO_TOKEN=48edad6202b3538cddec1d4e232fd22fae42fbccbe792152e1b766c22b9e4339
     - DATABASE_TEST=postgresql://postgres@localhost/test_db
     - SECRET_KEY=supersecret
 

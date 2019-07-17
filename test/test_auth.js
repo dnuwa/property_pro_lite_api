@@ -128,4 +128,14 @@ describe('Login Authentication ', () => {
         done();
       });
   });
+  it('should raise a 404 error', (done) => {
+    chai.request(app)
+      .post('/url')
+      .end((err, res) => {
+        res.should.have.status(404);
+        res.body.should.be.a('object');
+        res.body.should.have.property('error');
+        done();
+      });
+  });
 });
