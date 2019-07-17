@@ -1,7 +1,7 @@
 # property_pro_lite_api
 Property Pro Lite is a platform where people can create and/or search properties for sale or rent.
 
-[![Build Status](https://travis-ci.org/dnuwa/property_pro_lite_api.svg?branch=develop)](https://travis-ci.org/dnuwa/property_pro_lite_api)              [![Coverage Status](https://coveralls.io/repos/github/dnuwa/property_pro_lite_api/badge.svg?branch=develop)](https://coveralls.io/github/dnuwa/property_pro_lite_api?branch=develop)                [![Maintainability](https://api.codeclimate.com/v1/badges/9046cf3cf9bf0d6ad28a/maintainability)](https://codeclimate.com/github/dnuwa/property_pro_lite_api/maintainability)
+[![Build Status](https://travis-ci.org/dnuwa/property_pro_lite_api.svg?branch=develop)](https://travis-ci.org/dnuwa/property_pro_lite_api)              [![Coverage Status](https://coveralls.io/repos/github/dnuwa/property_pro_lite_api/badge.svg?branch=develop)](https://coveralls.io/github/dnuwa/property_pro_lite_api?branch=develop)                [![Maintainability](https://api.codeclimate.com/v1/badges/9046cf3cf9bf0d6ad28a/maintainability)](https://codeclimate.com/github/dnuwa/property_pro_lite_api/maintainability)                [![Test Coverage](https://api.codeclimate.com/v1/badges/9046cf3cf9bf0d6ad28a/test_coverage)](https://codeclimate.com/github/dnuwa/property_pro_lite_api/test_coverage)
 
 #### A hosted version of the application UI can be found [here](https://dnuwa.github.io/property_lite_pro/UI/)
 

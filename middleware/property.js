@@ -25,3 +25,16 @@ export function validatePrice(req, res, next) {
   }
   next();
 }
+
+export function validateStatus(req, res, next) {
+  const { newStatus } = req.body;
+
+  if (!newStatus || newStatus !== 'SOLD') {
+    return res.status(400).json({
+      status: 400,
+      message: 'bad request',
+      error: 'The newStatus value should be = SOLD',
+    });
+  }
+  next();
+}

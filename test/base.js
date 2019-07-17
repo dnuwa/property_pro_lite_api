@@ -113,6 +113,16 @@ exports.signup_user_11 = {
   isAdmin: true,
 };
 
+exports.signup_user_12 = {
+  email: 'ras@gmail.com',
+  password: 'somestring1',
+  lastName: 'nuwa',
+  firstName: 'daniel',
+  phoneNumber: '+256701354725',
+  address: 'plot 12 bukoto street',
+  isAdmin: true,
+};
+
 exports.login_user_10 = {
   email: 'daniel@gmail.com',
   password: 'somestring1',
@@ -175,5 +185,16 @@ exports.advert_5 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg'
+  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+};
+
+exports.advert_6 = {
+  status: 'available',
+  description: 'enter houses',
+  type: 'residential',
+  state: 'available',
+  city: 'kampala',
+  address: 'bukoto street',
+  price: '10000',
+  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
 };
