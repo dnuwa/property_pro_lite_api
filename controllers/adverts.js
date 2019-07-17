@@ -1,5 +1,6 @@
 /* eslint-disable import/named */
 import { currentUser } from '../helpers/utility';
+
 import db from '../db';
 
 exports.createAdvert = async (req, res) => {
