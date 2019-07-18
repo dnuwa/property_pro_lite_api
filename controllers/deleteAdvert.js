@@ -12,7 +12,6 @@ exports.deleteAdvert = async (req, res) => {
   if (!loggedinUser) {
     return res.status(401).json({
       status: 401,
-      messsage: 'unauthorised access',
       error: 'Token is expired, please login again!',
     });
   }
@@ -23,8 +22,7 @@ exports.deleteAdvert = async (req, res) => {
   if (!advertToDelete) {
     return res.status(404).json({
       status: 404,
-      message: 'Advert Not Found',
-      error: `There is no property with Id: ${propertyId}`,
+      error: `Advert with ID: ${propertyId} Not Found`,
     });
   }
 
@@ -32,8 +30,7 @@ exports.deleteAdvert = async (req, res) => {
   if (loggedinUser.id !== advertToDelete.owner) {
     return res.status(401).json({
       status: 401,
-      message: 'Unauthorised Access',
-      error: `you are not authorised to delete proprty Id: ${propertyId}`,
+      error: `Unauthorised to delete proprty Id: ${propertyId}`,
     });
   }
 
@@ -43,8 +40,6 @@ exports.deleteAdvert = async (req, res) => {
   // Return adverts details
   return res.status(202).json({
     status: 202,
-    message: 'Advert Succefully Deleted',
-    data: `Advert with Id: ${propertyId} has been successfuly deleted`,
-
+    data: `Advert with Id: ${propertyId} has been Successfuly deleted`,
   });
 };
