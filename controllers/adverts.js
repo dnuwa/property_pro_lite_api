@@ -18,6 +18,30 @@ exports.createAdvert = async (req, res) => {
     });
   }
 
+  // State should be New/Old
+  const diffStates = ['new', 'old'];
+  const lowercase = state.toLowerCase();
+  const isTrue = diffStates.indexOf(lowercase);
+  if (isTrue < 0) {
+    return res.status(400).json({
+      status: 400,
+      message: 'Bad request',
+      error: 'State should either be NEW or OLD',
+    });
+  }
+
+  // Satus should be Available/Sold
+  const statuses = ['available', 'sold'];
+  const satusValue = status.toLowerCase();
+  const isSatusTrue = statuses.indexOf(satusValue);
+  if (isSatusTrue < 0) {
+    return res.status(400).json({
+      status: 400,
+      message: 'Bad request',
+      error: 'Status should either be AVAILABLE or SOLD',
+    });
+  }
+
   const queryDescripption = 'SELECT * FROM property WHERE description = $1';
   const propertyarray = await db.query(queryDescripption, [description]);
   if (propertyarray.rows.length > 0) {
@@ -74,6 +98,15 @@ exports.allAdverts = async (req, res) => {
     };
     advertList.push(data);
   });
+
+  if (advertList.length === 0) {
+    return res.status(400).json({
+      status: 400,
+      message: 'Adverts Not Found !',
+      error: 'There are no adverts in the database currently',
+
+    });
+  }
   return res.status(200).json({
     status: 200,
     message: 'Adverts Successfully Retrieved!',

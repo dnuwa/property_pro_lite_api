@@ -44,6 +44,8 @@ This __api__ currently  has two versions hosted on heroku;
 
 - [v1 (Database with persistance data)](https://banka-database-api.herokuapp.com/api/v1)
 
+- [API Documentation](https://property-pro-lite-api-app.herokuapp.com/api_docs/)
+
 #### Requirements
 - [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) A general purpose programming language
 - [npm](https://docs.npmjs.com/about-npm/) A tool for installing node packages

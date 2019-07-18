@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS
                 password TEXT NOT NULL,
                 phoneNumber VARCHAR(15) NOT NULL,
                 address VARCHAR(128) NOT NULL,
-                isAdmin BOOLEAN DEFAULT TRUE,
+                isAgent BOOLEAN DEFAULT TRUE,
+                isAdmin BOOLEAN DEFAULT FALSE,
                 createdAt TIMESTAMP DEFAULT NOW(),
                 updatedAt TIMESTAMP DEFAULT NOW());
 CREATE TABLE IF NOT EXISTS

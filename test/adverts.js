@@ -95,4 +95,43 @@ describe('CREATE AN ADVERT ', () => {
         done();
       });
   });
+  it('should raise 400 on an invalid status', (done) => {
+    chai.request(app)
+      .post(LOGIN_URL)
+      .send(base.login_user_8)
+      .end((err, res) => {
+        if (err) done();
+        chai.request(app)
+          .post('/api/v1/property')
+          .set('x-access-token', res.body.data.token)
+          .send(base.advert_7)
+          .end((error, resp) => {
+            if (error) done();
+            resp.should.have.status(400);
+            resp.body.should.be.a('object');
+            resp.body.should.have.property('status');
+            done();
+          });
+      });
+  });
+  it('should raise 400 on an invalid state', (done) => {
+    chai.request(app)
+      .post(LOGIN_URL)
+      .send(base.login_user_8)
+      .end((err, res) => {
+        if (err) done();
+        chai.request(app)
+          .post('/api/v1/property')
+          .set('x-access-token', res.body.data.token)
+          .send(base.advert_8)
+          .end((error, resp) => {
+            if (error) done();
+            resp.should.have.status(400);
+            resp.body.should.be.a('object');
+            resp.body.should.have.property('status');
+            resp.body.should.have.property('error');
+            done();
+          });
+      });
+  });
 });
