@@ -6,7 +6,7 @@ import db from '../db';
 // create user account
 exports.signup = async (req, res) => {
   const {
-    email, firstName, lastName, password, phoneNumber, address, isAdmin,
+    email, firstName, lastName, password, phoneNumber, address,
   } = req.body;
 
   // hashpassword
@@ -23,8 +23,8 @@ exports.signup = async (req, res) => {
   }
 
   // Insert new user in the database
-  const query2 = 'INSERT INTO users( email, firstName, lastName, password, phoneNumber, address, isAdmin) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *';
-  const values = [email, firstName, lastName, hashedPassword, phoneNumber, address, isAdmin];
+  const query2 = 'INSERT INTO users( email, firstName, lastName, password, phoneNumber, address) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *';
+  const values = [email, firstName, lastName, hashedPassword, phoneNumber, address];
 
   const result = await db.query(query2, values);
   const row = result.rows[0];

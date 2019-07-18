@@ -16,7 +16,7 @@ export function validateEmptyFields(req, res, next) {
 export function validatePrice(req, res, next) {
   const { price } = req.body;
 
-  if (isNaN(price)) {
+  if (!price.match(/^(?:[1-9]\d*|0)?(?:\.\d+)?$/)) {
     return res.status(400).json({
       status: 400,
       message: 'bad request',
