@@ -25,7 +25,6 @@ exports.createAdvert = async (req, res) => {
   if (isTrue < 0) {
     return res.status(400).json({
       status: 400,
-      message: 'Bad request',
       error: 'State should either be NEW or OLD',
     });
   }
@@ -37,7 +36,6 @@ exports.createAdvert = async (req, res) => {
   if (isSatusTrue < 0) {
     return res.status(400).json({
       status: 400,
-      message: 'Bad request',
       error: 'Status should either be AVAILABLE or SOLD',
     });
   }
@@ -60,7 +58,6 @@ exports.createAdvert = async (req, res) => {
   // advert  response
   return res.status(201).json({
     status: 201,
-    message: 'Advert Successfully created',
     data: {
       id: rows[0].id,
       Status: status,
@@ -100,16 +97,14 @@ exports.allAdverts = async (req, res) => {
   });
 
   if (advertList.length === 0) {
-    return res.status(400).json({
-      status: 400,
-      message: 'Adverts Not Found !',
-      error: 'There are no adverts in the database currently',
+    return res.status(404).json({
+      status: 404,
+      error: 'Adverts Not Found !',
 
     });
   }
   return res.status(200).json({
     status: 200,
-    message: 'Adverts Successfully Retrieved!',
     data: advertList,
   });
 };
@@ -121,17 +116,15 @@ exports.singleAdvert = async (req, res) => {
   const query = 'SELECT * FROM property WHERE id = $1';
   const propertyAd = await db.query(query, [Number(propertyId)]);
   if (propertyAd.rows.length === 0) {
-    return res.status(400).json({
-      status: 400,
-      message: 'Advert Not Found !',
-      error: `There is no property advert with Id: ${propertyId}`,
+    return res.status(404).json({
+      status: 404,
+      error: `Advert Not With ID: ${propertyId} Found !`,
 
     });
   }
 
   return res.status(200).json({
     status: 200,
-    message: 'Advert Found !',
     data: propertyAd.rows,
 
   });

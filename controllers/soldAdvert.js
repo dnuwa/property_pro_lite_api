@@ -10,7 +10,6 @@ exports.markSold = async (req, res) => {
   if (!loggedinUser) {
     return res.status(401).json({
       status: 401,
-      messsage: 'unauthorised access',
       error: 'Token is expired, please login again!',
     });
   }
@@ -20,7 +19,6 @@ exports.markSold = async (req, res) => {
   if (!advertToUpdate) {
     return res.status(404).json({
       status: 404,
-      message: 'Advert Not Found',
       error: `There is no property with Id: ${propertyId}`,
     });
   }
@@ -28,8 +26,7 @@ exports.markSold = async (req, res) => {
   if (loggedinUser.id !== advertToUpdate.owner) {
     return res.status(401).json({
       status: 401,
-      message: 'Unauthorised Access',
-      error: `you are not authorised to edit proprty Id: ${propertyId}`,
+      error: `You are not authorised to edit proprty Id: ${propertyId}`,
     });
   }
 

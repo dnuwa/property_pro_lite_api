@@ -36,12 +36,12 @@ describe('GET SAME TYPE ADVERTS ', () => {
           });
       });
   });
-  it('should return 400 if no advert found', (done) => {
+  it('should return 404 if no advert found', (done) => {
     chai.request(app)
       .get('/api/v1/property/type/bombadia')
       .end((error, resp) => {
         if (error) done();
-        resp.should.have.status(400);
+        resp.should.have.status(404);
         resp.body.should.be.a('object');
         resp.body.should.have.property('error');
         done();
