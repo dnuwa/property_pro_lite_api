@@ -42,7 +42,7 @@ In your terminal
 This __api__ currently  has two versions hosted on heroku;
 - [v1 (In memory Data Structures)](https://property-pro1.herokuapp.com/api/v1)
 
-- [v1 (Database with persistance data)](https://banka-database-api.herokuapp.com/api/v1)
+- [v1 (Database with persistance data)](https://property-pro-lite-api-app.herokuapp.com/api/v1)
 
 - [API Documentation](https://property-pro-lite-api-app.herokuapp.com/api_docs/)
 
