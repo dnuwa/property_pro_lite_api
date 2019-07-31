@@ -135,6 +135,7 @@ exports.login_user_8 = {
 
 exports.advert_1 = {
   status: 'available',
+  title:"some title",
   description: 'partment located in kigali city center',
   type: 'residential',
   state: 'new',
@@ -146,6 +147,7 @@ exports.advert_1 = {
 
 exports.advert_2 = {
   status: 'available',
+  title:"some title",
   description: 'some description',
   type: 'some type',
   state: 'new',
@@ -157,6 +159,7 @@ exports.advert_2 = {
 
 exports.advert_3 = {
   status: 'available',
+  title:"some title",
   description: 'houses in kigali city center',
   type: 'residential',
   state: 'new',
@@ -168,6 +171,7 @@ exports.advert_3 = {
 
 exports.advert_4 = {
   status: 'available',
+  title:"some title",
   description: 'kigali city center houses',
   type: 'residential',
   state: 'new',
@@ -179,6 +183,7 @@ exports.advert_4 = {
 
 exports.advert_5 = {
   status: 'available',
+  title:"some title",
   description: 'owesomeness just :)',
   type: 'residential',
   state: 'new',
@@ -190,6 +195,7 @@ exports.advert_5 = {
 
 exports.advert_6 = {
   status: 'available',
+  title:"some title",
   description: 'enter houses',
   type: 'residential',
   state: 'new',
@@ -200,6 +206,7 @@ exports.advert_6 = {
 };
 exports.advert_7 = {
   status: 'some status',
+  title:"some title",
   description: 'enter houses',
   type: 'residential',
   state: 'new',
@@ -211,6 +218,7 @@ exports.advert_7 = {
 
 exports.advert_8 = {
   status: 'available',
+  title:"some title",
   description: 'enter houses',
   type: 'residential',
   state: 'some state',
