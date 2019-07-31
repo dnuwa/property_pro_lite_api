@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS
             property(
                 id SERIAL PRIMARY KEY,
                 status VARCHAR(9) DEFAULT 'AVAILABLE',
+                title VARCHAR(128) NOT NULL,
                 description VARCHAR(128) NOT NULL UNIQUE,
                 type VARCHAR(20) NOT NULL,
                 state VARCHAR(128) NOT NULL,

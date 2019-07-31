@@ -5,7 +5,7 @@ import db from '../db';
 
 exports.createAdvert = async (req, res) => {
   const {
-    status, type, state, city, address, price, imageUrl, description,
+    status, type, state, city, address, price, imageUrl, description, title
   } = req.body;
 
 
@@ -49,8 +49,8 @@ exports.createAdvert = async (req, res) => {
     });
   }
 
-  const query = 'INSERT INTO property(status, description, type, state, city, address, price, imageUrl, owner) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *';
-  const values = [status, description, type, state, city, address, price, imageUrl, user.id];
+  const query = 'INSERT INTO property(status, title, description, type, state, city, address, price, imageUrl, owner) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *';
+  const values = [status, title, description, type, state, city, address, price, imageUrl, user.id];
 
   const { rows } = await db.query(query, values);
 
@@ -61,6 +61,7 @@ exports.createAdvert = async (req, res) => {
     data: {
       id: rows[0].id,
       Status: status,
+      Title: title,
       Description: description,
       Type: type,
       State: state,
@@ -83,13 +84,14 @@ exports.allAdverts = async (req, res) => {
     const data = {
       id: row.id,
       Status: row.status,
+      Title: row.title,
       Description: row.description,
       Type: row.type,
       State: row.state,
       City: row.city,
       Address: row.address,
       Price: row.price,
-      Image: row.imageUrl,
+      Image: row.imageurl,
       created_on: row.createdon,
       created_by_staffId: row.owner,
     };
