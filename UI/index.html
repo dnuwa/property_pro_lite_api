@@ -7,7 +7,7 @@
     <title>property pro lite</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-
+    <script src="scripts/sweetalert2/sweetalert2.js"></script>
 </head>
 
 <body>
@@ -70,33 +70,33 @@
                 <div class="close-signup">+</div>
                 <div class="form-section">
                     <img src="images/user_avatar.png" alt="user_avatar">
-                    <form action="">
+                    <form action="" id="signup-form">
                         <p>
                             <label for="">First Name</label>
-                            <input type="text" name="firstname" placeholder="John">
+                            <input type="text" name="firstname" id="firstname" placeholder="John">
                         </p>
                         <p>
                             <label for="">Last Name</label>
-                            <input type="text" name="lastname" placeholder="Doe">
+                            <input type="text" name="lastname" id="lastname" placeholder="Doe">
                         </p>
                         <p>
                             <label for="">Phone Number</label>
-                            <input type="text" name="phonenumber" placeholder="(+250) 555-555">
+                            <input type="text" name="phonenumber" id="phonenumber" placeholder="(+250) 555-555">
                         </p>
                         <p>
                             <label for="">Address</label>
-                            <input type="text" name="address" placeholder="colivile street plot 21, kigali - Rwanda">
+                            <input type="text" name="address" id="address" placeholder="colivile street plot 21, kigali - Rwanda">
                         </p>
                         <p>
                             <label for="">Email Address</label>
-                            <input type="email" name="email" placeholder="john.deo@hotmail.com">
+                            <input type="email" name="email" id="email" placeholder="john.deo@hotmail.com">
                         </p>
                         <p>
                             <label for="">Password</label>
-                            <input type="password" name="password" placeholder="********">
+                            <input type="password" name="password" id="password" placeholder="********">
                         </p>
                         <p class="full">
-                            <button>Submit</button>
+                            <button id="signup-button">Submit</button>
                         </p>
                     </form>
                 </div>
@@ -112,32 +112,32 @@
                     <form action="">
                         <p>
                             <label for="">Title</label>
-                            <input type="text" name="type"
+                            <input type="text" name="type" id="title"
                                 placeholder="10 BEDROOMS FURNISHED HOUSE FOR RENTING IN KICUKIRO">
                         </p>
                         <p>
                             <label for="">Type</label>
-                            <input type="text" name="type" placeholder="Rental/Sale">
+                            <input type="text" name="type" placeholder="Rental/Sale" id="type">
                         </p>
                         <p>
                             <label for="">District</label>
-                            <input type="text" name="text" placeholder="kampala">
+                            <input type="text" name="text" placeholder="kampala" id="district">
                         </p>
                         <p>
                             <label for="">Location</label>
-                            <input type="text" name="text" placeholder="central division">
+                            <input type="text" name="text" placeholder="central division" id="location">
                         </p>
                         <p>
                             <label for="">Number of rooms</label>
-                            <input type="text" name="text" placeholder="3">
+                            <input type="text" name="text" placeholder="3" id="rooms">
                         </p>
                         <p>
                             <label for="">Price</label>
-                            <input type="text" name="text" placeholder="$1000">
+                            <input type="text" name="text" placeholder="$1000" id="price">
                         </p>
                         <p class="full">
                             <label for="">Description</label>
-                            <textarea name="message" rows="5"></textarea>
+                            <textarea name="message" rows="5" id="description"></textarea>
                         </p>
 
                         <input type="file" name="fileToUpload" id="fileToUpload">
@@ -158,6 +158,7 @@
         <p>&copy; 2019 property_lite_pro.com<p>
     </footer>
     <script src='scripts/main.js'></script>
+    <script src='scripts/signup.js'></script>
 </body>
 
 </html>
