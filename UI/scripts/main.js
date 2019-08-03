@@ -47,14 +47,12 @@ function closeAdvertForm() {
 }
 
 const getAllAdvert = () => {
-  console.log('page load');
   fetch('https://property-pro-lite-api-app.herokuapp.com/api/v1/property')
   .then(res => res.json())
   .then((advertsObj) => {
       let adverts = advertsObj.data;
       let output = '';
       adverts.forEach(function(advert){
-          console.log(advert);
           output += `
           <div class="card">
               <div class="image">
