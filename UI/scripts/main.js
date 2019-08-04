@@ -45,32 +45,3 @@ document.querySelector('.close-advert').onclick = closeAdvertForm;
 function closeAdvertForm() {
   document.querySelector('.bg-modal-advert').style.display = 'none';
 }
-
-const getAllAdvert = () => {
-  fetch('https://property-pro-lite-api-app.herokuapp.com/api/v1/property')
-  .then(res => res.json())
-  .then((advertsObj) => {
-      let adverts = advertsObj.data;
-      let output = '';
-      adverts.forEach(function(advert){
-          output += `
-          <div class="card">
-              <div class="image">
-          <img
-              src="${advert.Image}">
-          </div>
-          <div class="title">
-              <h5>${advert.Title}</h5>
-          </div>
-          <div class="description">
-              <p>${advert.Description}
-          </p>
-              <button>Read More...</button>
-          </div>
-          </div>
-          `;
-      });
-      document.getElementById('main').innerHTML = output;
-  })
-};
-addEventListener('load', getAllAdvert);
