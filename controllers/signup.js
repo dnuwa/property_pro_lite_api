@@ -34,6 +34,8 @@ exports.signup = async (req, res) => {
     message: 'User Successfully Created',
     data: {
       token: middleware.token(row.id),
+      userId: row.id,
+      firstName: row.firstname
     },
   });
 };

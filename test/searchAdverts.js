@@ -12,7 +12,7 @@ chai.use(chaiHttp);
 chai.should();
 
 describe('GET SAME TYPE ADVERTS ', () => {
-  it('should return 201 on success', (done) => {
+  it('should return 200 on success', (done) => {
     chai.request(app)
       .post(SIGNUP_URL)
       .send(base.signup_user_9)

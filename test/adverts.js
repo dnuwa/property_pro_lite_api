@@ -134,4 +134,24 @@ describe('CREATE AN ADVERT ', () => {
           });
       });
   });
+
+  it('should return 200 on successful return of a user adverts', (done) => {
+    chai.request(app)
+      .post(LOGIN_URL)
+      .send(base.login_user_8)
+      .end((err, res) => {
+        if (err) done();
+        chai.request(app)
+          .get('/api/v1/user/adverts')
+          .set('x-access-token', res.body.data.token)
+          .end((error, resp) => {
+            if (error) done();
+            resp.should.have.status(200);
+            resp.body.should.be.a('object');
+            resp.body.should.have.property('status');
+            resp.body.should.have.property('data');
+            done();
+          });
+      });
+  });
 });
