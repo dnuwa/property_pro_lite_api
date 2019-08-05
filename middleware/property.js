@@ -1,12 +1,12 @@
 /* eslint-disable consistent-return */
 export function validateEmptyFields(req, res, next) {
   const {
-    status, type, state, city, address, price, imageUrl, description, title,
+    status, type, state, city, address, price, imageUrl, description, title, rooms,
   } = req.body;
-  if (!status || !type || !state || !city || !address || !price || !imageUrl || !description || !title) {
+  if (!status || !type || !state || !city || !address || !price || !imageUrl || !description || !title || !rooms) {
     return res.status(400).json({
       status: 400,
-      error: 'status, decription, type, state, city, address, price, title and imageUrl are required !',
+      error: 'status, decription, type, state, city, address, price, title, rooms and imageUrl are required !',
     });
   }
   next();

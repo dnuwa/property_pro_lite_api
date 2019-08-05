@@ -30,6 +30,8 @@ exports.signin = async (req, res) => {
     message: 'User Successfuly Logged In',
     data: {
       token: middleware.token(rows[0].id),
+      userId: rows[0].id,
+      firstName: rows[0].firstname
     },
   });
 };

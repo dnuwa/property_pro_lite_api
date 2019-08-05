@@ -22,4 +22,6 @@ adRouter
 adRouter
   .route('/property/:propertyId/sold')
   .patch(middleware.verifyToken, validateStatus, markAsSoldcontroller.markSold);
+adRouter.route('/user/adverts').get(middleware.verifyToken, advertController.userAds);
+
 module.exports = adRouter;

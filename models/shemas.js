@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS
                 price FLOAT DEFAULT 0,
                 createdOn TIMESTAMP DEFAULT NOW(),
                 updatedOn TIMESTAMP DEFAULT NOW(),
+                rooms INTEGER NOT NULL,
                 owner INTEGER NOT NULL ,
                 imageUrl VARCHAR(128) NOT NULL,
                 FOREIGN KEY(owner) REFERENCES users(id) ON DELETE CASCADE);

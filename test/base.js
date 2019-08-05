@@ -143,6 +143,7 @@ exports.advert_1 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 2,
 };
 
 exports.advert_2 = {
@@ -155,6 +156,7 @@ exports.advert_2 = {
   address: 'bukoto street',
   price: '!@$123',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 };
 
 exports.advert_3 = {
@@ -167,6 +169,7 @@ exports.advert_3 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 };
 
 exports.advert_4 = {
@@ -179,6 +182,7 @@ exports.advert_4 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 };
 
 exports.advert_5 = {
@@ -191,6 +195,7 @@ exports.advert_5 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 };
 
 exports.advert_6 = {
@@ -203,6 +208,7 @@ exports.advert_6 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 };
 exports.advert_7 = {
   status: 'some status',
@@ -214,6 +220,7 @@ exports.advert_7 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 2,
 };
 
 exports.advert_8 = {
@@ -226,5 +233,6 @@ exports.advert_8 = {
   address: 'bukoto street',
   price: '10000',
   imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+  rooms: 3,
 
 };
