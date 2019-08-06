@@ -41,41 +41,49 @@
         <div class="modal-content-edit">
             <div class="close-edit">+</div>
             <div class="form-section">
-                <img src="images/house_avatar.ico" alt="house_avatar">
                 <form action="">
                     <p>
                         <label for="">Title</label>
-                        <input type="text" name="type"
-                            placeholder="10 BEDROOMS FURNISHED HOUSE FOR RENTING IN KICUKIRO">
+                        <input type="text" name="type" id="title">
                     </p>
                     <p>
                         <label for="">Type</label>
-                        <input type="text" name="type" placeholder="Rental/Sale">
+                        <input type="text" name="type" id="type">
                     </p>
                     <p>
-                        <label for="">District</label>
-                        <input type="text" name="text" placeholder="kampala">
+                        <label for="">City</label>
+                        <input type="text" name="text" id="city">
                     </p>
                     <p>
-                        <label for="">Location</label>
-                        <input type="text" name="text" placeholder="central division">
+                        <label for="">Address</label>
+                        <input type="text" name="text" id="address">
                     </p>
                     <p>
                         <label for="">Number of rooms</label>
-                        <input type="text" name="text" placeholder="3">
+                        <input type="text" name="text" id="rooms">
                     </p>
                     <p>
                         <label for="">Price</label>
-                        <input type="text" name="text" placeholder="$1000">
+                        <input type="text" name="text" id="price">
+                    </p>
+                    <p>
+                        <label for="">State</label>
+                        <input type="text" name="type" id="state">
+                    </p>
+                    <p>
+                        <label for="">Status</label>
+                        <input type="text" name="type" id="status">
                     </p>
                     <p class="full">
                         <label for="">Description</label>
-                        <textarea name="message" rows="5"></textarea>
+                        <textarea name="message" rows="4" id="description"></textarea>
                     </p>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
                     <p class="full">
-                        <button>Submit</button>
+                        <label for="">Property Image URL</label>
+                        <input type="text" name="text" id="imageurl">
+                    </p>
+                    <p class="full">
+                        <button id="update-advert">Submit</button>
                     </p>
                 </form>
             </div>
@@ -129,6 +137,7 @@
         <p>&copy; 2019 property_lite_pro.com<p>
     </footer>
     <script src='scripts/adminView.js'></script>
+    <script src='scripts/updateAd.js'></script>
 </body>
 
 </html>

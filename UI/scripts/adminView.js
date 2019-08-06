@@ -1,5 +1,24 @@
 function openAdEdit() {
     document.querySelector('.bg-modal-edit').style.display = 'flex';
+
+    let advert_id = localStorage.getItem("advert_id");
+    fetch(`https://property-pro-lite-api-app.herokuapp.com/api/v1/property/${advert_id}`)
+    .then(res => res.json())
+    .then((resObject) => {
+        document.getElementById('title').value = resObject.data[0].title;
+        document.getElementById('type').value = resObject.data[0].type;
+        document.getElementById('city').value = resObject.data[0].city;
+        document.getElementById('address').value = resObject.data[0].address;
+        document.getElementById('rooms').value = resObject.data[0].rooms;
+        document.getElementById('price').value = resObject.data[0].price;
+        document.getElementById('state').value = resObject.data[0].state;
+        document.getElementById('status').value = resObject.data[0].status;
+        document.getElementById('description').value = resObject.data[0].description;
+        document.getElementById('imageurl').value = resObject.data[0].imageurl;
+
+    })
+
+    .catch((err) => console.log(err))
 };
 
 document.querySelector('.close-edit').onclick = closeAdEdit;
@@ -75,7 +94,6 @@ const markSold = () => {
     })
     .then(res => res.json())
     .then((response) => {
-        console.log(response);
         if(response.error){
             swal({
                 text: response.error
