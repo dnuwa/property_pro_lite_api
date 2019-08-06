@@ -108,7 +108,7 @@
             <div class="modal-content-advert">
                 <div class="close-advert">+</div>
                 <div class="form-section">
-                    <img src="images/house_avatar.ico" alt="house_avatar">
+                    <!-- <img src="images/house_avatar.ico" alt="house_avatar"> -->
                     <form action="">
                         <p>
                             <label for="">Title</label>
@@ -135,15 +135,26 @@
                             <label for="">Price</label>
                             <input type="text" name="text" placeholder="$1000" id="price">
                         </p>
+                        <p>
+                            <label for="">State</label>
+                            <input type="text" name="type" id="state"
+                                placeholder="New/old">
+                        </p>
+                        <p>
+                            <label for="">Status</label>
+                            <input type="text" name="type" id="status"
+                                placeholder="Available">
+                        </p>
                         <p class="full">
                             <label for="">Description</label>
-                            <textarea name="message" rows="5" id="description"></textarea>
+                            <textarea name="message" rows="4" id="description"></textarea>
                         </p>
-                        <input type="file" name="fileToUpload" id="fileToUpload">
-                        <input type="submit" value="Upload Image" name="submit">
-
                         <p class="full">
-                            <button>Submit</button>
+                            <label for="">Property Image URL</label>
+                            <input type="text" name="text" placeholder="htps://someimage.jpg" id="image">
+                        </p>
+                        <p class="full">
+                            <button id="post-ad">Submit</button>
                         </p>
                     </form>
                 </div>
@@ -158,6 +169,7 @@
     <script src='scripts/signup.js'></script>
     <script src='scripts/signin.js'></script>
     <script src='scripts/myAds.js'></script>
+    <script src='scripts/postAd.js'></script>
 </body>
 
 </html>
