@@ -8,19 +8,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
     <script src="scripts/sweetalert2/sweetalert2.js"></script>
+    <script src="https://use.fontawesome.com/afc00dc805.js"></script>
 </head>
 
 <body>
     <div class="wrapper" id="wrapper">
         <!-- navigation -->
         <nav class="nav-bar">
-            <div class="logo"><span>Property</span>Pro-Lite</div>
+            <div class="logo" id="index">
+                <a href="index.html">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i><span>Property</span>Pro-Lite
+                </a>
+            </div>
             <ul>
-                <li id="index">
-                    <a href="index.html">Buy/Rent</a>
-                </li>
                 <li id="my-adverts">
-                    <a href="#">My Ads</a>
+                    <a href="#">Listed</a>
                 </li>
                 <li id="advertise">
                     <a href="#">Advertise</a>
@@ -33,7 +35,10 @@
                 </li>
             </ul>
             <div class="search-form">
-                <input type="text" placeholder="search">
+                <form>
+                    <input type="text" placeholder="search">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>   
             </div>
         </nav>
         <section class="landing">
@@ -46,6 +51,11 @@
         <section class="main" id="main">
             <!--cards -->
         </section>
+
+        <footer>
+            <p>&copy; 2019 property_lite_pro.com<p>
+        </footer>
+
         <div class="bg-modal">
             <div class="modal-content">
                 <div class="close">+</div>
@@ -161,9 +171,6 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2019 property_lite_pro.com<p>
-    </footer>
     <script src='scripts/main.js'></script>
     <script src='scripts/allAdverts.js'></script>
     <script src='scripts/signup.js'></script>

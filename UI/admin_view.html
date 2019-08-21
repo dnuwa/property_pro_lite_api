@@ -7,29 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
     <script src="scripts/sweetalert2/sweetalert2.js"></script>
+    <script src="https://use.fontawesome.com/afc00dc805.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <!-- navigation -->
         <nav class="nav-bar">
-            <div class="logo"><span>Property</span>Pro-Lite</div>
+            <div class="logo" id="index">
+                <a href="index.html">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i><span>Property</span>Pro-Lite
+                </a>
+            </div>
             <ul>
-                <li id="index">
-                    <a href="index.html">Buy/Rent</a>
+                <li id="my-adverts">
+                    <a href="#">Listed</a>
                 </li>
                 <li id="advertise">
                     Advertise
                 </li>
                 <li>
-                    Admin:
-                </li>
-                <li>
-                    daniel
+                    Daniel
                 </li>
             </ul>
             <div class="search-form">
-                <input type="text" placeholder="search">
+                <form>
+                    <input type="text" placeholder="search">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>   
             </div>
         </nav>
         <section class="info" id="info">
