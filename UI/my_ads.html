@@ -7,19 +7,21 @@
     <title>property pro lite</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
+    <script src="https://use.fontawesome.com/afc00dc805.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <!-- navigation -->
         <nav class="nav-bar">
-            <div class="logo"><span>Property</span>Pro-Lite</div>
+            <div class="logo" id="index">
+                <a href="index.html">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i><span>Property</span>Pro-Lite
+                </a>
+            </div>
             <ul>
-                <li id="index">
-                    <a href="index.html">Buy/Rent</a>
-                </li>
                 <li id="my-adverts">
-                    My Ads
+                    Listed
                 </li>
                 <li id="advertise">
                     Advertise
@@ -32,7 +34,10 @@
                 </li>
             </ul>
             <div class="search-form">
-                <input type="text" placeholder="search">
+                <form>
+                    <input type="text" placeholder="search">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>   
             </div>
         </nav>
         <section class="landing">
