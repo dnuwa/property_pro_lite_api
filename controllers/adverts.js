@@ -113,6 +113,26 @@ exports.allAdverts = async (req, res) => {
   });
 };
 
+exports.findbyOffset = async (req, res) =>{
+  const { params: { page } } = req;
+  
+  try{
+    const limit = Number(8);
+    const offset = (Number(page) -1)*limit;
+    const query = 'SELECT * FROM property LIMIT $1 OFFSET $2';
+    const values = [limit, offset];
+    const { rows } = await db.query(query, values);
+
+    return res.status(200).json({
+    status: 200,
+    data: rows
+  })
+  }
+  catch(err){
+    console.log(`something went wrong ${ err }`)
+  }
+}
+
 // returns a single property advert
 exports.singleAdvert = async (req, res) => {
   const { params: { propertyId } } = req;
