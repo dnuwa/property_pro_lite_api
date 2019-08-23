@@ -4,6 +4,7 @@ import searchController from '../controllers/searchAdverts';
 import deleteController from '../controllers/deleteAdvert';
 import updateController from '../controllers/updateAdvert';
 import markAsSoldcontroller from '../controllers/soldAdvert';
+// import pageAdverts from '../controllers/adverts';
 import middleware from '../middleware';
 import { validateEmptyFields, validatePrice, validateStatus } from '../middleware/property';
 
@@ -23,5 +24,7 @@ adRouter
   .route('/property/:propertyId/sold')
   .patch(middleware.verifyToken, validateStatus, markAsSoldcontroller.markSold);
 adRouter.route('/user/adverts').get(middleware.verifyToken, advertController.userAds);
+
+adRouter.route('/property/paginate/:page').get(advertController.findbyOffset); 
 
 module.exports = adRouter;
