@@ -7,6 +7,8 @@ import base from './base';
 const LOGIN_URL = '/api/v1/auth/signin';
 const SIGNUP_URL = '/api/v1/auth/signup';
 
+const image = './helpers/unsplash.jpg';
+
 // Configure chai
 chai.use(chaiHttp);
 chai.should();
@@ -21,7 +23,8 @@ describe('UPDATE AN ADVERT', () => {
         chai.request(app)
           .post('/api/v1/property')
           .set('x-access-token', res.body.data.token)
-          .send(base.advert_6)
+          .field(base.advert_6)
+          .attach('photo', image)
           .end((error, resp) => {
             if (error) done();
             chai.request(app)

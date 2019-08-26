@@ -1,5 +1,13 @@
 import db from '../db';
 
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name:'dtuesm5ex',
+  api_key:'881838372886587',
+  api_secret:'sj9MAQBSRQM91HSvbXP7EjhJY5M'
+});
+
 exports.currentUser = async (id) => {
   const query = 'SELECT * FROM users WHERE id = $1';
   const { rows } = await db.query(query, [id]);
@@ -29,3 +37,13 @@ exports.advertsList = async (column, searchId, res ) => {
 
   });
 };
+
+exports.imageUpload = async (file) =>{
+
+  const link = await cloudinary.uploader.upload(file.tempFilePath, function(err, result){
+    if (err !== undefined){
+      console.log(`an error occured ${err}`)
+    }
+  });
+  return link.url
+}

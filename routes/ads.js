@@ -1,14 +1,16 @@
 import Router from 'express';
+import fileupload from 'express-fileupload';
 import advertController from '../controllers/adverts';
 import searchController from '../controllers/searchAdverts';
 import deleteController from '../controllers/deleteAdvert';
 import updateController from '../controllers/updateAdvert';
 import markAsSoldcontroller from '../controllers/soldAdvert';
-// import pageAdverts from '../controllers/adverts';
 import middleware from '../middleware';
 import { validateEmptyFields, validatePrice, validateStatus } from '../middleware/property';
 
 const adRouter = Router();
+
+adRouter.use(fileupload({ useTempFiles: true }));
 
 adRouter
   .route('/property')

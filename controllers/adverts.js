@@ -1,11 +1,14 @@
 /* eslint-disable import/named */
-import { currentUser, advertsList } from '../helpers/utility';
+import { currentUser, advertsList, imageUpload } from '../helpers/utility';
 
 import db from '../db';
 
 exports.createAdvert = async (req, res) => {
+  const { photo } = req.files;
+  
+  const imageUrl = await imageUpload(photo);
   const {
-    status, type, state, city, address, price, imageUrl, description, title, rooms
+    status, type, state, city, address, price, description, title, rooms
   } = req.body;
 
 

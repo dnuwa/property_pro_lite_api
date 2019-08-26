@@ -133,6 +133,29 @@ exports.login_user_8 = {
   password: 'somestring1',
 };
 
+exports.signup_user_ = {
+  email: 'agaba@gmail.com',
+  password: 'somestring1',
+  lastName: 'nuwa',
+  firstName: 'daniel',
+  phoneNumber: '+256701354725',
+  address: 'plot 12 bukoto street',
+  isAdmin: true,
+}
+
+exports.advert_ = {
+  status: 'available',
+  title:"some title",
+  description: 'located in kigali city center',
+  type: 'residential',
+  state: 'new',
+  city: 'kampala',
+  address: 'bukoto street',
+  price: '10000',
+
+  rooms: 2,
+}
+
 exports.advert_1 = {
   status: 'available',
   title:"some title",
@@ -142,7 +165,7 @@ exports.advert_1 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 2,
 };
 
@@ -155,7 +178,7 @@ exports.advert_2 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '!@$123',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 };
 
@@ -168,7 +191,7 @@ exports.advert_3 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 };
 
@@ -181,7 +204,7 @@ exports.advert_4 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 };
 
@@ -194,7 +217,7 @@ exports.advert_5 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 };
 
@@ -207,7 +230,7 @@ exports.advert_6 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 };
 exports.advert_7 = {
@@ -219,7 +242,7 @@ exports.advert_7 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 2,
 };
 
@@ -232,7 +255,7 @@ exports.advert_8 = {
   city: 'kampala',
   address: 'bukoto street',
   price: '10000',
-  imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*RKZ5NBNqwlLXA6vewu7xmw.jpeg',
+
   rooms: 3,
 
 };
