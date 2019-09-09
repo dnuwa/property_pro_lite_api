@@ -1,9 +1,11 @@
 # property_pro_lite_api
-Property Pro Lite is a platform where people can create and/or search properties for sale or rent.
-
 [![Build Status](https://travis-ci.org/dnuwa/property_pro_lite_api.svg?branch=develop)](https://travis-ci.org/dnuwa/property_pro_lite_api)              [![Coverage Status](https://coveralls.io/repos/github/dnuwa/property_pro_lite_api/badge.svg?branch=develop)](https://coveralls.io/github/dnuwa/property_pro_lite_api?branch=develop)                [![Maintainability](https://api.codeclimate.com/v1/badges/9046cf3cf9bf0d6ad28a/maintainability)](https://codeclimate.com/github/dnuwa/property_pro_lite_api/maintainability)
 
+Property Pro Lite is a platform where people can create and/or search properties for sale or rent.
+
 #### A hosted version of the application UI can be found [here](https://dnuwa.github.io/property_lite_pro/UI/)
+
+#### A complete interative version(developed with vanila js) of the application can be found [here](https://dnuwa.github.io/property_pro_lite_api/UI/)
 
 ### Project Overview
 Property Pro Lite is a platform where people can create and/or search properties for sale or rent.
