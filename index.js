@@ -35,7 +35,7 @@ app.use((error, req, res, next) => {
 });
 
 const { PORT } = process.env || 5000;
-
+console.log(`app running on port ${PORT}`)
 app.listen(PORT);
 
 export default app;
