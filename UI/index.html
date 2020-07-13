@@ -8,16 +8,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
     <script src="scripts/sweetalert2/sweetalert2.js"></script>
+    <script src="https://use.fontawesome.com/afc00dc805.js"></script>
 </head>
 
 <body>
     <div class="wrapper" id="wrapper">
         <!-- navigation -->
         <nav class="nav-bar">
-            <div class="logo"><span>Property</span>Pro-Lite</div>
+            <div class="logo" id="index">
+                <a href="index.html">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i><span>Property</span>Pro-Lite
+                </a>
+            </div>
             <ul>
-                <li id="index">
-                    <a href="index.html">Buy/Rent</a>
+                <li id="my-adverts">
+                    <a href="#">Listed</a>
                 </li>
                 <li id="advertise">
                     <a href="#">Advertise</a>
@@ -30,7 +35,10 @@
                 </li>
             </ul>
             <div class="search-form" id="search-form">
-                <input type="text" id="type-input" placeholder="search by type">
+                <form>
+                    <input type="text" id="type-input" placeholder="search by type">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
             </div>
         </nav>
         <section class="landing">
@@ -43,6 +51,10 @@
         <section class="main" id="main">
             <!--cards -->
         </section>
+
+        <footer>
+            <p>&copy; 2019 property_lite_pro.com<p>
+        </footer>
 
         <div class="bg-modal">
             <div class="modal-content">
@@ -64,7 +76,6 @@
                 <div id="signup-link">Don't have an account? SignUp</div>
             </div>
         </div>
-
         <div class="bg-modal-signup">
             <div class="modal-content-signup">
                 <div class="close-signup">+</div>
@@ -103,12 +114,11 @@
                 <div id="login-link">Already have an account? Log In</div>
             </div>
         </div>
-
         <div class="bg-modal-advert">
             <div class="modal-content-advert">
                 <div class="close-advert">+</div>
                 <div class="form-section">
-                    <img src="images/house_avatar.ico" alt="house_avatar">
+                    <!-- <img src="images/house_avatar.ico" alt="house_avatar"> -->
                     <form action="">
                         <p>
                             <label for="">Title</label>
@@ -135,33 +145,39 @@
                             <label for="">Price</label>
                             <input type="text" name="text" placeholder="$1000" id="price">
                         </p>
+                        <p>
+                            <label for="">State</label>
+                            <input type="text" name="type" id="state"
+                                placeholder="New/old">
+                        </p>
+                        <p>
+                            <label for="">Status</label>
+                            <input type="text" name="type" id="status"
+                                placeholder="Available">
+                        </p>
                         <p class="full">
                             <label for="">Description</label>
-                            <textarea name="message" rows="5" id="description"></textarea>
+                            <textarea name="message" rows="4" id="description"></textarea>
                         </p>
-
-                        <input type="file" name="fileToUpload" id="fileToUpload">
-                        <input type="submit" value="Upload Image" name="submit">
-
                         <p class="full">
-                            <button>Submit</button>
+                            <label for="">Property Image URL</label>
+                            <input type="text" name="text" placeholder="htps://someimage.jpg" id="image">
                         </p>
-
+                        <p class="full">
+                            <button id="post-ad">Submit</button>
+                        </p>
                     </form>
-
                 </div>
-
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2019 property_lite_pro.com<p>
-    </footer>
     <script src='scripts/main.js'></script>
     <script src='scripts/allAdverts.js'></script>
     <script src='scripts/signup.js'></script>
     <script src='scripts/signin.js'></script>
     <script src='scripts/search.js'></script>
+    <script src='scripts/myAds.js'></script>
+    <script src='scripts/postAd.js'></script>
 </body>
 
 </html>

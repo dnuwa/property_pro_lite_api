@@ -11,15 +11,21 @@ const propertyDetails = () =>{
                 <div class="box">
                     <div class="date">${ad.createdon}</div>
                     <h1>${ad.title}</h1>
-                    <p>${ad.description}</p>
-                    <p>Status : ${ad.status}</p>
-                    <p>Type : ${ad.type}</p>
-                    <p>District : ${ad.city}</p>
-                    <p>location : ${ad.address}</p>
-                    <p class="price">${ad.price}/mo</p>
-                    <div>
-                        <button>Buy Now</button>
-                        <button id="display-map">Click to view map</button>
+                    <p><i class="fa fa-audio-description">${ad.description}</i></p>
+                    <div class="content">
+                        <i class="fa fa-shower">     Status: ${ad.status}</i>      
+                        <i class="fa fa-home">       Type: ${ad.type}</i>        
+                    </div>
+                    <div class="content">
+                        <i class="fa fa-thumb-tack">     District: ${ad.city}</i>      
+                        <i class="fa fa-map-marker">     Location: ${ad.address}</i>      
+                    </div>
+                    <div class="content">
+                        <p class="price"><i class="fa fa-money">${ad.price}/mo</i></p>
+                        <div>
+                            <button>Buy Now</button>
+                            <button id="display-map">Click to view map</button>
+                        </div>
                     </div>
                 </div>
             `;

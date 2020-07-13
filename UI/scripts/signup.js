@@ -31,6 +31,7 @@ const signup = (e) =>{
                 text: data.error
             })
         } else {
+            localStorage.setItem("advert_id", advert_id);
             swal({
                 text: data.message
             }).then(() => {
